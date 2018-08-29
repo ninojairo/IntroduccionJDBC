@@ -17,19 +17,17 @@ import java.util.List;
  */
 public class Test {
     
-    public static void selectRecords(){
-        
-        PersonaDAO.
-        
-    
-    }
-    
     public static void main(String[] args) {
         
         PersonaDAO personaDAO = new PersonaDAOJDBC();
         
         try {
             List<PersonaDTO>personasDTO = personaDAO.select();
+            for(PersonaDTO personaDTO : personasDTO){
+                System.out.println(personaDTO);
+                System.err.println("");
+            }
+            
         
             
         } catch (Exception e) {
@@ -37,7 +35,7 @@ public class Test {
         }
         
         
-        selectRecords();
+        
     }
     
 }
